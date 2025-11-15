@@ -12,15 +12,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
     
+
+
+
     @RestController
     public class GeminiController{
+        private static final String apiKey= "AIzaSyBSxyR1Mhxx4FYSUKJoGglQSOWLJxIchOs";
 
         @GetMapping("/api/test-vision")
         public String runVisionTest(){
-            String apiKey= "AIzaSyBSxyR1Mhxx4FYSUKJoGglQSOWLJxIchOs";
+         
 
             try{
               System.out.println("GET request to /api/test-vision received!");
+
 
             Client client = Client.builder()
                 .apiKey(apiKey)
@@ -59,12 +64,28 @@ import org.springframework.web.bind.annotation.RequestBody;
     @PostMapping("/api/analyze")
     public String postMethodName(@RequestBody byte[] imageBytes) {
 
+            //  try{
+            //     String responseMessage = "SUCCESS: Received image of "+ imageBytes.length+ "bytes.";
+            //     System.out.println("Sending test response: "+responseMessage);
+            //     return responseMessage;
+            //   }catch(Exception e){
+            //     System.out.println("REQUEST FAILED");
+            //     e.printStackTrace();
+            //     return "Error: "+ e.getMessage();
+            //   }
+ 
+    
+            
+       
+
         try {
 
         System.out.println("Starting Gemini test with new SDK...");
 
-        Client client = Client.builder() 
-            .build();
+
+
+
+        Client client = Client.builder().apiKey(apiKey).build();
      
         Content content = Content.fromParts(
             // This is the correct method: Part.fromBytes(...)
