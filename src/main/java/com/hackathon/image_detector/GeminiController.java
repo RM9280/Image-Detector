@@ -70,7 +70,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
             Content content = Content.fromParts(
                 Part.fromBytes(imageBytes, "image/webp"),
-                Part.fromText("What is in this image? Be concise.")
+                Part.fromText("What is in this image? Be concise and extremely detailed in your explanation.")
             );
 
             System.out.println("Sending request to Gemini...");
