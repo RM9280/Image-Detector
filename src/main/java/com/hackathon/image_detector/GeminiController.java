@@ -102,6 +102,9 @@ import org.springframework.web.bind.annotation.RequestBody;
         );
 
         String aiResponse = response.text();
+        System.out.println("Gemini Response: " + aiResponse);
+        Runtime.getRuntime().exec("say " + aiResponse);
+
         return aiResponse;
         }catch (Exception e) {
             e.printStackTrace();
