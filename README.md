@@ -7,10 +7,10 @@ Additionally, the system includes text-to-speech (TTS) functionality to audibly 
 This backend was developed as part of a larger application that includes a camera-based frontend and website, enabling real-time image analysis and accessibility-focused feedback.
 
 Features: 
-Image analysis using Google Gemini Vision
-REST API built with Spring Boot
-Accepts raw image bytes from web frontend or camera
-Text-to-Speech output using Windows PowerShell
+Image analysis using Google Gemini Vision,
+REST API built with Spring Boot,
+accepts raw image bytes from web frontend or camera,
+text-to-Speech output using Windows PowerShell.
 
 Package Structure:
 
